@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ParallaxBackground from "./ParallaxBackground";
 import { Search, MapPin, Briefcase, Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -209,6 +210,7 @@ export function InternshipDashboard() {
 
   return (
     <div className="min-h-screen bg-background">
+      <ParallaxBackground />
       {/* Header */}
       <header className="bg-gradient-primary shadow-form">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
