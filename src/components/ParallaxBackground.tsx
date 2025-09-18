@@ -16,9 +16,14 @@ const ParallaxBackground = () => {
   }, []);
 
   const calculatePosition = (baseX: number, baseY: number, depth: number) => {
-    const x = baseX - (mousePosition.x / window.innerWidth - 0.5) * 50 * depth;
-    const y = baseY - (mousePosition.y / window.innerHeight - 0.5) * 50 * depth;
-    return { transform: `translate(${x}px, ${y}px)` };
+    if (typeof window !== "undefined") {
+      const x =
+        baseX - (mousePosition.x / window.innerWidth - 0.5) * 50 * depth;
+      const y =
+        baseY - (mousePosition.y / window.innerHeight - 0.5) * 50 * depth;
+      return { transform: `translate(${x}px, ${y}px)` };
+    }
+    return {};
   };
 
   return (

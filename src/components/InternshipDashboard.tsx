@@ -209,7 +209,7 @@ export function InternshipDashboard() {
   const uniqueSectors = Array.from(new Set(internships.map((i) => i.sector)));
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-transparent">
       <ParallaxBackground />
       {/* Header */}
       <header className="bg-gradient-primary shadow-form">
